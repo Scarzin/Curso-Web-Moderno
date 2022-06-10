@@ -1,0 +1,120 @@
+<h1>Projeto</h1>
+
+<ul class="tree">
+    <li class="lista">
+        <button wm-button>Backend</button>
+        <ul id="listaBackend" class="lista">
+            <li>
+                <button wm-button>app</button> 
+                <ul id="listaApp">
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul> 
+            </li>
+            <li class="lista">
+                <button wm-button>config</button> 
+                <ul id="listaConfig">
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="lista">
+        <button wm-button>frontend</button> 
+        <ul id="listaFrontend" class="lista">
+            <liclass="lista">
+                <button wm-button>public</button>
+                <ul id="listaPublic">
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<style>
+    .lista {
+        display: list-item;
+    }
+    
+    .listaPublic {
+        display: list-item;
+    }
+    .listaConfig {
+        display: list-item;
+    }
+    .listaApp {
+        display: list-item;
+    }
+</style>
+<script>
+    //SOLUÇÃO PROFISSA XD
+    document.querySelectorAll('[wm-button]').forEach(bttn => {
+        bttn.onclick = function(e){
+            const lista = bttn.nextElementSibling
+            const d = lista.style.display
+            lista.style.display = d == 'none' ? 'list-item' : 'none'
+        }
+    })  
+    
+
+    //SOLUÇÃO FEITA SOLO F TOTAL
+    // // setando elementos em constantes
+    // const backend = document.getElementById('backend')
+    // const listaBackend = document.getElementById('listaBackend')
+    // const app = document.getElementById('app')
+    // const listaApp = document.getElementById('listaApp')
+    // const config = document.getElementById('config')
+    // const listaConfig = document.getElementById('listaConfig')
+    // const frontend = document.getElementById('frontend')
+    // const listaFrontend = document.getElementById('listaFrontend')
+    // const public = document.getElementById('public')
+    // const listaPublic = document.getElementById('listaPublic')
+
+    // //setando funçoes onClick() aos botoes
+    // backend.onclick = function(e) {
+    //     if(listaBackend.style.display == 'none'){
+    //         listaBackend.style.display = 'list-item'
+    //     } else {
+    //         listaBackend.style.display = 'none'
+    //     }
+    // }
+
+    // app.onclick = function(e) {
+    //     if(listaApp.style.display == 'none'){
+    //         listaApp.style.display = 'list-item'
+    //     } else {
+    //         listaApp.style.display = 'none'
+    //     }
+    // }
+
+    // config.onclick = function(e) {
+    //     if(listaConfig.style.display == 'none'){
+    //         listaConfig.style.display = 'list-item'
+    //     } else {
+    //         listaConfig.style.display = 'none'
+    //     }
+    // }
+
+    // frontend.onclick = function(e) {
+    //     if(listaFrontend.style.display == 'none'){
+    //         listaFrontend.style.display = 'list-item'
+    //     } else {
+    //         listaFrontend.style.display = 'none'
+    //     }
+    // }
+
+    // public.onclick = function(e) {
+    //     if(listaPublic.style.display == 'none'){
+    //         listaPublic.style.display = 'list-item'
+    //     } else {
+    //         listaPublic.style.display = 'none'
+    //     }
+    // }
+</script>
