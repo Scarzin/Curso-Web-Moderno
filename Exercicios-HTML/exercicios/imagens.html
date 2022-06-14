@@ -1,0 +1,87 @@
+<div wm-slider>
+    <p class="imagem">
+        <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="Muro da Cidade" width="513" height="342"
+            title="Muro da cidade por Tarso Bessa">
+    </p>
+    
+    <p class="imagem">
+        <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" alt="Intro Cod3r" height="342">
+    </p>
+    
+    <p class="imagem" class="circular">
+        <img src="http://files.cod3r.com.br/curso-web/imagem3.png" alt="Rio de Janeiro" height="342">
+    </p>
+    
+    <p class="imagem" class="texto">
+        <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" alt="Avatar" height="50" align="left">
+        Texto deioujoeiduo deuidoeek peijde peijmpqiejq
+        operwkjfpiowjeip frm4otki4ot fodkpflp rpepokrkr
+        emfçrkmgçkrmgkçr órkgorjg glokpklr rplokrorfmpr
+        rklwofow orkjgiprjgipoj róklrowkjo wokdjiwpjdpiw
+        jreijrhofg rpijforuijhguor rigpjrigjrp rigjnriougj
+    </p>
+    
+    <p class="imagem" class="cidade"></p>
+    
+    <p class="imagem">
+        <picture>
+            <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png"
+            media="(min-width: 600px)">
+            <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png" alt="">
+        </picture>
+    </p>
+</div>
+<style>
+    p {
+        position: absolute;
+        display: none;
+    }
+
+    .circular {
+        width: 513px;
+    }
+
+    .texto {
+        width: 400px;
+    }
+
+    .texto img {
+        margin: 10px;
+    }
+
+    .cidade {
+        width: 513px;
+        height: 342px;
+        background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200%;
+    }
+</style>
+<script>
+    var slideIndex = 2;
+    const slides = document.getElementsByTagName('p')
+
+    function showSlides() {
+        let indexAnterior = slideIndex - 1
+        if (slideIndex >= slides.length) {
+            slideIndex = 0
+        }
+
+        if(slideIndex = 0) {
+            document.getElementsByTagName('p').foreach(div =>{
+                div.style.display = 'none'
+            })
+            slides[0].style.display = 'block'
+        } else {
+            slides[indexAnterior].style.display = 'none'
+            slides[slideIndex].style.display = 'block'
+        }
+        slideIndex += 1
+
+        setTimeout(showSlides, 1000);
+    }
+   
+    showSlides()
+
+</script>
