@@ -33,7 +33,7 @@
 </div>
 <style>
     p {
-        position: absolute;
+        position: relative;
         display: none;
     }
 
@@ -59,25 +59,22 @@
     }
 </style>
 <script>
-    var slideIndex = 2;
-    const slides = document.getElementsByTagName('p')
-
+    var slideIndex = 0;
+    
     function showSlides() {
-        let indexAnterior = slideIndex - 1
+        const slides = document.getElementsByTagName('p')
+
         if (slideIndex >= slides.length) {
             slideIndex = 0
         }
-
-        if(slideIndex = 0) {
-            document.getElementsByTagName('p').foreach(div =>{
-                div.style.display = 'none'
-            })
-            slides[0].style.display = 'block'
-        } else {
-            slides[indexAnterior].style.display = 'none'
-            slides[slideIndex].style.display = 'block'
+        
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none'            
         }
-        slideIndex += 1
+
+        slides[slideIndex].style.display = 'block'
+
+        slideIndex++
 
         setTimeout(showSlides, 1000);
     }
